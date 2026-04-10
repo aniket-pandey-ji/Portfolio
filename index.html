@@ -2116,7 +2116,7 @@ gsap.utils.toArray('.sec-label, .sec-title, .sec-sub').forEach(el => {
 /* project cards stagger */
 gsap.from('.proj-card', {
   opacity: 0, y: 40, stagger: 0.15,
-  scrollTrigger: { trigger: '.projects-grid', start: 'top 85%' },
+  scrollTrigger: { trigger: '.projects-grid', start: 'top bottom', once: true },
   duration: 0.9, ease: 'power3.out'
 });
 
