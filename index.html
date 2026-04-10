@@ -2116,6 +2116,7 @@ gsap.utils.toArray('.sec-label, .sec-title, .sec-sub').forEach(el => {
 /* project cards stagger */
 gsap.from('.proj-card', {
   opacity: 0, y: 40, stagger: 0.15,
+  immediateRender: false,  
   scrollTrigger: { trigger: '.projects-grid', start: 'top bottom', once: true },
   duration: 0.9, ease: 'power3.out'
 });
@@ -2137,6 +2138,7 @@ if (typeof VanillaTilt !== 'undefined') {
 window.addEventListener('load', () => {
   setTimeout(() => {
     document.getElementById('preloader').classList.add('out');
+    ScrollTrigger.refresh();
   }, 2200);
 });
 
